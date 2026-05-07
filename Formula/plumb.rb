@@ -1,4 +1,4 @@
-class PlumbCli < Formula
+class Plumb < Formula
   desc "Plumb command-line interface — the `plumb` binary."
   homepage "https://plumb.aramhammoudeh.com"
   version "0.0.11"
