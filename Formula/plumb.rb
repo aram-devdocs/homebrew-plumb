@@ -2,6 +2,20 @@ class Plumb < Formula
   desc "Plumb command-line interface — the `plumb` binary."
   homepage "https://plumb.aramhammoudeh.com"
   version "0.0.11"
+
+  on_macos do
+    on_intel do
+      odie <<~EOS
+        Plumb does not yet ship native Intel Mac (x86_64) binaries.
+        Install via Cargo instead:
+
+          cargo install plumb-cli
+
+        Tracking: https://github.com/aram-devdocs/plumb/issues/269
+      EOS
+    end
+  end
+
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.11/plumb-cli-aarch64-apple-darwin.tar.xz"
