@@ -1,35 +1,18 @@
-class Plumb < Formula
+class PlumbCli < Formula
   desc "Plumb command-line interface — the `plumb` binary."
   homepage "https://plumb.aramhammoudeh.com"
-  version "0.0.11"
-
-  on_macos do
-    on_intel do
-      odie <<~EOS
-        Plumb does not yet ship native Intel Mac (x86_64) binaries.
-        Install via Cargo instead:
-
-          cargo install plumb-cli
-
-        Tracking: https://github.com/aram-devdocs/plumb/issues/269
-      EOS
-    end
-  end
-
+  version "0.0.12"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.11/plumb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "ef053e9bcd81bc0d681b744d3f60f44d83fde230890756feb3b4263934d895ed"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-aarch64-apple-darwin.tar.xz"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.11/plumb-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "36c5ee90cefa573cafb67c8f149c657e2ecea12b74e985873a4c5d95d09147e4"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-aarch64-unknown-linux-gnu.tar.xz"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.11/plumb-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "772f568f14975afbf110291452a160bd9a15dbc004c9c939f758b2f532a68b14"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-x86_64-unknown-linux-gnu.tar.xz"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
