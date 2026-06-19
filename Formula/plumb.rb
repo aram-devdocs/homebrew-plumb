@@ -1,8 +1,7 @@
 class Plumb < Formula
   desc "Plumb command-line interface — the `plumb` binary."
   homepage "https://plumb.aramhammoudeh.com"
-  version "0.0.12"
-
+  version "0.0.13"
   on_macos do
     on_intel do
       odie <<~EOS
@@ -18,18 +17,18 @@ class Plumb < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "8f3e64fbc442fac7d8f9f41bb3e4bd4a187e750d3bdb02b20de44d89463e0441"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.13/plumb-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "4104ed688b78069bc8b9c6529bc8ebabbedfc76db8a9b61ee93866d2688baf84"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "12d35c8c695f096fef955881a80269b85f0a57f0651a80766eab776c201f32fb"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.13/plumb-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7da901b51295573462526ccccf9aad3d2b5dae40bcb5dbfc6771275316e092f1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.12/plumb-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6cedd4e349af802e38adabba6fbe9b9a6ea2a486609103a18a50d5628fc56fff"
+      url "https://github.com/aram-devdocs/plumb/releases/download/v0.0.13/plumb-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "59740d1dd377566a7064959784a722946e95465da836ab8c9dbc3b2ea998a605"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
